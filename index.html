@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>崑鼎互動小遊戲</title>
+  <link href="css/style.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.typekit.net/xpy4ega.css" />
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <h1 class="sr-only">ECOVE 崑鼎投資控股有限公司 ECOVE Environment Corporation</h1>
+    </header>
+    <div class="main">
+      <!-- 拼圖 -->
+      <ul class="puzzle">
+        <!-- 答對題目時加 .puzzle-item--active  .puzzle-item--pu1--active-->
+        <li class="puzzle-item puzzle-item--pu1">
+          <!-- 答對題目時加 .puzzle-item-text--active-->
+          <span class="puzzle-item-text puzzle-item-text--q1">Q1</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu2">
+          <span class="puzzle-item-img puzzle-item-img--img2"></span>
+          <span class="puzzle-item-text puzzle-item-text--q2">Q2</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu3">
+          <span class="puzzle-item-img puzzle-item-img--img3"></span>
+          <span class="puzzle-item-text puzzle-item-text--q3">Q3</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu4">
+          <span class="puzzle-item-img puzzle-item-img--img4"></span>
+          <span class="puzzle-item-text puzzle-item-text--q4">Q4</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu5">
+          <span class="puzzle-item-img puzzle-item-img--img5"></span>
+          <span class="puzzle-item-text puzzle-item-text--q5">Q5</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu6">
+          <span class="puzzle-item-img puzzle-item-img--img6"></span>
+          <span class="puzzle-item-text puzzle-item-text--q6">Q6</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu7">
+          <span class="puzzle-item-img puzzle-item-img--img7"></span>
+          <span class="puzzle-item-text puzzle-item-text--q7">Q7</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu8">
+          <span class="puzzle-item-img puzzle-item-img--img8"></span>
+          <span class="puzzle-item-text puzzle-item-text--q8">Q8</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu9">
+          <span class="puzzle-item-img puzzle-item-img--img9"></span>
+          <span class="puzzle-item-text puzzle-item-text--q9">Q9</span>
+        </li>
+        <li class="puzzle-item puzzle-item--pu10">
+          <span class="puzzle-item-img puzzle-item-img--img10"></span>
+          <span class="puzzle-item-text puzzle-item-text--q10">Q10</span>
+        </li>
+      </ul>
+      <!--全部完成答對時 加.bg-CTCI--finish / .puzzle display:none -->
+      <div class="bg-CTCI">
+        <p class="bg-CTCI--finish--text" style="display: none"></p>
+        <div class="bg-CTCI--finish--text--green">
+          <span>WOW!!! 您真棒!!!</span>
+          <span>感謝您對ECOVE的了解</span>
+        </div>
+      </div>
+      <!-- 問題 -->
+      <div class="questionArea" style="display: none">
+        <!-- 第一題 -->
+        <div class="questionWrap questionWrap--q1" style="display: none">
+          <div class="question question--q1">
+            <div class="question-title question-title--q1">
+              <p class="question-title-q">Q1 <span class="arrowDown">></span></p>
+              <p class="question-title-subject">I am a ECOVE</p>
+            </div>
+            <ul class="radioButton radioButton--q1">
+              <li class="radioButton-item">
+                <label for="q1-1" class="radioButton-item-text">A <span class="divider">｜</span> investor</label>
+                <input type="radio" id="q1-1" name="radioButton--q1" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q1-2" class="radioButton-item-text">B <span class="divider">｜</span> project owner</label>
+                <input type="radio" id="q1-2" name="radioButton--q1" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q1-3" class="radioButton-item-text">C <span class="divider">｜</span> employee</label>
+                <input type="radio" id="q1-3" name="radioButton--q1" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q1-4" class="radioButton-item-text">D <span class="divider">｜</span> community
+                  resident</label>
+                <input type="radio" id="q1-4" name="radioButton--q1" value="D" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q1-5" class="radioButton-item-text">E <span class="divider">｜</span> other</label>
+                <input type="radio" id="q1-5" name="radioButton--q1" value="E" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q1"></div>
+        </div>
+        <!-- 第二題 -->
+        <div class="questionWrap questionWrap--q2" style="display: none">
+          <div class="question question--q2">
+            <div class="question-title question-title--q2">
+              <p class="question-title-q">Q2 <span class="arrowDown">></span></p>
+              <p class="question-title-subject">ECOVE is headquartered in</p>
+            </div>
+            <ul class="radioButton radioButton--q2">
+              <li class="radioButton-item">
+                <label for="q2-1" class="radioButton-item-text">A <span class="divider">｜</span> Taipei City</label>
+                <input type="radio" id="q2-1" name="radioButton--q2" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q2-2" class="radioButton-item-text">B <span class="divider">｜</span> New Taipei City</label>
+                <input type="radio" id="q2-2" name="radioButton--q2" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q2-3" class="radioButton-item-text">C <span class="divider">｜</span> Kaohsiung City</label>
+                <input type="radio" id="q2-3" name="radioButton--q2" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q2-4" class="radioButton-item-text">D <span class="divider">｜</span> Taichung City</label>
+                <input type="radio" id="q2-4" name="radioButton--q2" value="D" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q2-5" class="radioButton-item-text">E <span class="divider">｜</span> Tainan City</label>
+                <input type="radio" id="q2-5" name="radioButton--q2" value="E" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q2"></div>
+        </div>
+        <!-- 第三題 -->
+        <div class="questionWrap questionWrap--q3" style="display: none">
+          <div class="question question--q3">
+            <div class="question-title question-title--q3">
+              <p class="question-title-q">Q3 <span class="arrowDown">></span></p>
+              <p class="question-title-subject">In order to establish a feasible standard that can be followed by enterprises to implement CSR, the
+                UN, in 2015, issued the SDGs. How many items are there in the SDGs?
+              </p>
+            </div>
+            <ul class="radioButton radioButton--q3">
+              <li class="radioButton-item">
+                <label for="q3-1" class="radioButton-item-text">A <span class="divider">｜</span> 16 items</label>
+                <input type="radio" id="q3-1" name="radioButton--q3" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q3-2" class="radioButton-item-text">B <span class="divider">｜</span> 17 items</label>
+                <input type="radio" id="q3-2" name="radioButton--q3" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q3-3" class="radioButton-item-text">C <span class="divider">｜</span> 18 items</label>
+                <input type="radio" id="q3-3" name="radioButton--q3" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q3-4" class="radioButton-item-text">D <span class="divider">｜</span> 19 items</label>
+                <input type="radio" id="q3-4" name="radioButton--q3" value="D" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q3"></div>
+        </div>
+        <!-- 第四題 -->
+        <div class="questionWrap questionWrap--q4" style="display: none">
+          <div class="question question--q4">
+            <div class="question-title question-title--q4">
+              <p class="question-title-q">Q4 <span class="arrowDown">></span></p>
+              <p class="question-title-subject">Which of the following is ECOVE’s CSR policy?</p>
+            </div>
+            <ul class="radioButton radioButton--q4">
+              <li class="radioButton-item">
+                <label for="q4-1" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">A</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Strengthening organizational structure</span>
+                </label>
+                <input type="radio" id="q4-1" name="radioButton--q4" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q4-2" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">B</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Fulﬁlling the Responsibilities as a Corporate Citizen</span>
+                </label>
+                <input type="radio" id="q4-2" name="radioButton--q4" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q4-3" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">C</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Performing CSR with due faith</span>
+                </label>
+                <input type="radio" id="q4-3" name="radioButton--q4" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q4-4" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">D</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> All of the above</span>
+                </label>
+                <input type="radio" id="q4-4" name="radioButton--q4" value="D" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q4"></div>
+        </div>
+        <!-- 第五題 -->
+        <div class="questionWrap questionWrap--q5" style="display: none">
+          <div class="question question--q5">
+            <div class="question-title question-title--q5">
+              <p class="question-title-q">
+                Q5 <span class="arrowDown">></span>
+              </p>
+              <p class="question-title-subject">ECOVE’s business operations are closely aligned to United Nations’ Sustainable Development Goals
+                (SDGs).It fulfills CSR through its core competencies and promotes company-wide sustainability engagement. Which of the following is
+                “its core competencies,” as mentioned above?</p>
+            </div>
+            <ul class="radioButton radioButton--q5">
+              <li class="radioButton-item">
+                <label for="q5-1" class="radioButton-item-text">A <span class="divider">｜</span>Green engineering</label>
+                <input type="radio" id="q5-1" name="radioButton--q5" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q5-2" class="radioButton-item-text">B <span class="divider">｜</span>iEPC</label>
+                <input type="radio" id="q5-2" name="radioButton--q5" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q5-3" class="radioButton-item-text">C <span class="divider">｜</span>smart plant</label>
+                <input type="radio" id="q5-3" name="radioButton--q5" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q5-4" class="radioButton-item-text">D <span class="divider">｜</span> circular economy</label>
+                <input type="radio" id="q5-4" name="radioButton--q5" value="D" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q5-5" class="radioButton-item-text">E <span class="divider">｜</span> all of the above</label>
+                <input type="radio" id="q5-5" name="radioButton--q5" value="E" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q5"></div>
+        </div>
+        <!-- 第六題 -->
+        <div class="questionWrap questionWrap--q6" style="display: none">
+          <div class="question question--q6">
+            <div class="question-title question-title--q6">
+              <p class="question-title-q">
+                Q6 <span class="arrowDown">></span>
+              </p>
+              <p class="question-title-subject question-title-subject--q6">ECOVE is role-model enterprise among others in Taiwan in realizing CSR and
+                promoting environmental sustainability. Which one of the following sustainability/CSR awards has been awarded to ECOVE?</p>
+            </div>
+            <ul class="radioButton radioButton--q6">
+              <li class="radioButton-item">
+                <label for="q6-1" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">A</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> National Sustainability Development Award</span>
+                </label>
+                <input type="radio" id="q6-1" name="radioButton--q6" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q6-2" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">B</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> National Enterprise Environmental Protection Award</span>
+                </label>
+                <input type="radio" id="q6-2" name="radioButton--q6" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q6-3" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">C</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> 1st Place in CommonWealth Magazine’s Annual Evaluation on Medium-Size Enterprises</span>
+                </label>
+                <input type="radio" id="q6-3" name="radioButton--q6" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q6-4" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">D</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Top 5% among Over-the-Counter and Listed Companies in Corporate Governance for Six Years in a
+                  Row.</span>
+                </label>
+                <input type="radio" id="q6-4" name="radioButton--q6" value="D" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q6-5" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">E</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> All of the Above</span>
+                </label>
+                <input type="radio" id="q6-5" name="radioButton--q6" value="E" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q6"></div>
+        </div>
+        <!-- 第七題 -->
+        <div class="questionWrap questionWrap--q7" style="display: none">
+          <div class="question question--q7">
+            <div class="question-title question-title--q7">
+              <p class="question-title-q">
+                Q7 <span class="arrowDown">></span>
+              </p>
+              <p class="question-title-subject">ECOVE cares about sustainability issues. It is the first company in Taiwan to advocate an internal
+                program called “Total Participation CSR Excellence Practice,” where meetings attended by more than five people is required to have CSR
+                presentations so that all colleagues and guests can learn about the meaning of CSR and its practices. It is a way to foster CSR
+                culture internally. What is the name of this program?</p>
+            </div>
+            <ul class="radioButton radioButton--q7">
+              <li class="radioButton-item">
+                <label for="q7-1" class="radioButton-item-text">A <span class="divider">｜</span> CSR Moment</label>
+                <input type="radio" id="q7-1" name="radioButton--q7" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q7-2" class="radioButton-item-text">B <span class="divider">｜</span> CSR Tour</label>
+                <input type="radio" id="q7-2" name="radioButton--q7" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q7-3" class="radioButton-item-text">C <span class="divider">｜</span> CSR Development</label>
+                <input type="radio" id="q7-3" name="radioButton--q7" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q7-4" class="radioButton-item-text">D <span class="divider">｜</span> CSR Management</label>
+                <input type="radio" id="q7-4" name="radioButton--q7" value="D" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q7"></div>
+        </div>
+        <!-- 第八題 -->
+        <div class="questionWrap questionWrap--q8" style="display: none">
+          <div class="question question--q8">
+            <div class="question-title question-title--q8">
+              <p class="question-title-q">
+                Q8 <span class="arrowDown">></span>
+              </p>
+              <p class="question-title-subject">As a corporate citizen, in addition to company operation, ECOVE has also long been dedicated to paying
+                the society back and delivering its social responsibility as an enterprise. Therefore, aside from the long-term dedication to company
+                operation, what is ECOVE’s choice to be committed to, in terms of social participation?</p>
+            </div>
+            <ul class="radioButton radioButton--q8">
+              <li class="radioButton-item">
+                <label for="q8-1" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">A</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Social group events relevant to its operation</span>
+                </label>
+                <input type="radio" id="q8-1" name="radioButton--q8" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q8-2" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">B</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Long-term community establishment</span>
+                </label>
+                <input type="radio" id="q8-2" name="radioButton--q8" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q8-3" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">C</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Shared good deeds of volunteering</span>
+                </label>
+                <input type="radio" id="q8-3" name="radioButton--q8" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q8-4" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">D</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> All of the above</span>
+                </label>
+                <input type="radio" id="q8-4" name="radioButton--q8" value="D" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q8"></div>
+        </div>
+        <!-- 第九題 -->
+        <div class="questionWrap questionWrap--q9" style="display: none">
+          <div class="question question--q9">
+            <div class="question-title question-title--q9">
+              <p class="question-title-q">Q9 <span class="arrowDown">></span></p>
+              <p class="question-title-subject question-title-subject--q9">To increase the awareness of our nation’s children on the concept of
+                environmental sustainability, which of the following is the event held by ECOVE in the summer of 2020?</p>
+            </div>
+            <ul class="radioButton radioButton--q9">
+              <li class="radioButton-item">
+                <label for="q9-1" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">A</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Young makeup artist</span>
+                </label>
+                <input type="radio" id="q9-1" name="radioButton--q9" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q9-2" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">B</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Young sustainability engineer</span>
+                </label>
+                <input type="radio" id="q9-2" name="radioButton--q9" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q9-3" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">C</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Young news anchor</span>
+                </label>
+                <input type="radio" id="q9-3" name="radioButton--q9" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q9-4" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">D</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Young chefs</span>
+                </label>
+                <input type="radio" id="q9-4" name="radioButton--q9" value="D" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q9"></div>
+        </div>
+        <!-- 第十題 -->
+        <div class="questionWrap questionWrap--q10" style="display: none">
+          <div class="question question--q10">
+            <div class="question-title question-title--q10">
+              <p class="question-title-q">
+                Q10 <span class="arrowDown">></span>
+              </p>
+              <p class="question-title-subject">The extreme weather shown above is caused by global warming. Scientists around the global has a
+                consensus that, once we limit the emission of CO2, global warming can be alleviated. To help our mother nature decrease temperature,
+                we indeed should limit the emission of CO2. Which of the following can help limit the emission of CO2?</p>
+            </div>
+            <ul class="radioButton radioButton--q10">
+              <li class="radioButton-item">
+                <label for="q10-1" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">A</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Install solar power panels</span>
+                </label>
+                <input type="radio" id="q10-1" name="radioButton--q10" value="A" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q10-2" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">B</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Recycle and reuse waste</span>
+                </label>
+                <input type="radio" id="q10-2" name="radioButton--q10" value="B" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q10-3" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">C</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> Take public transportation as much as possible</span>
+                </label>
+                <input type="radio" id="q10-3" name="radioButton--q10" value="C" class="radioButton-item-input sr-only" />
+              </li>
+              <li class="radioButton-item">
+                <label for="q10-4" class="radioButton-item-text radioButton-item-text--flex">
+                  <span class="heading">D</span>
+                  <span class="divider divider--flex"></span>
+                  <span class="subject"></span> All of the above</span>
+                </label>
+                <input type="radio" id="q10-4" name="radioButton--q10" value="D" class="radioButton-item-input sr-only" />
+              </li>
+            </ul>
+          </div>
+          <div class="questionSuccess questionSuccess--q10"></div>
+        </div>
+        <!-- 答錯時 -->
+        <div class="questionFail" style="display: none">
+          <a href="javascript:;" class="buttonBack">返回</a>
+          <p class="questionFail-text">
+            正解 :<span class="questionFail-text--answer"> A </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>Copyright ©2020 ECOVE All rights reserved.</footer>
+  </div>
+</body>
+
+</html>
